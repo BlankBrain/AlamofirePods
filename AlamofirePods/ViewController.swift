@@ -23,7 +23,12 @@ class ViewController: UIViewController {
     
     @IBAction func getButtonClicked(_ sender: Any) {
         
-        self.textview.text = "button clicked"
+        AF.request("https://api.darksky.net/forecast/e03fba5c687227d65dd03e52b231c81d/37.8267,-122.4233").response{
+            response in
+            
+            self.textview.text = response.debugDescription
+            debugPrint(response)
+        }
     }
     
 
