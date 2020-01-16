@@ -10,11 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textview: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    
+    @IBAction func getButtonClicked(_ sender: Any) {
+        
+        self.textview.text = "button clicked"
+    }
+    
 
 }
 
