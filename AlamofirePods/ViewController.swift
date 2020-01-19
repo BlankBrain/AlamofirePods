@@ -13,7 +13,17 @@ import Alamofire
 class ViewController: UIViewController {
 
     @IBOutlet weak var textview: UITextView!
+    @IBOutlet weak var successLabel: UILabel!
+    let decoder = JSONDecoder() //declearing decode method
     
+    //model for json object
+    struct Course : Decodable {
+        let id: Int
+        let name: String
+        let link: String
+        let imageUrl: String
+        let number_of_lessons: Int
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,14 +33,22 @@ class ViewController: UIViewController {
     
     @IBAction func getButtonClicked(_ sender: Any) {
         
-        AF.request("https://api.darksky.net/forecast/e03fba5c687227d65dd03e52b231c81d/37.8267,-122.4233").response{
-            response in
+        AF.request("https://api.letsbuildthatapp.com/jsondecodable/course").responseJSON { response in
             
-            self.textview.text = response.debugDescription
-            debugPrint(response)
+            do{
+                let course = try self.decoder.decode(Course.self , from: response.data! )
+//object where the data will be saved >>    decoder method. decode ( model , from data object )
+               // self.textview.text = response.data?.base64EncodedString()
+                self.successLabel.text = course.name
+            }catch{
+                print("error parsing json data")  }
+            
+            }
+        
+        
+        
         }
-    }
     
-
+//end of class
 }
 

@@ -15,10 +15,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cR-2a-TjT">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cR-2a-TjT">
                                 <rect key="frame" x="114" y="801" width="187" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="NAy-Qv-UQN"/>
+                                </constraints>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -26,19 +28,43 @@
                                     <action selector="getButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RWY-Dv-5JI"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Dj4-Mo-mng">
-                                <rect key="frame" x="20" y="44" width="374" height="739"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Dj4-Mo-mng">
+                                <rect key="frame" x="20" y="44" width="374" height="195"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="195" id="tWX-sk-bO3"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJA-bN-mre">
+                                <rect key="frame" x="10" y="249" width="394" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Qtc-6f-Pxb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5cR-2a-TjT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="114" id="VFI-ol-F4W"/>
+                            <constraint firstItem="Dj4-Mo-mng" firstAttribute="centerX" secondItem="HJA-bN-mre" secondAttribute="centerX" id="Y7e-A2-Oc1"/>
+                            <constraint firstItem="Dj4-Mo-mng" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="b3c-FO-Bo1"/>
+                            <constraint firstItem="Dj4-Mo-mng" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bXt-wX-dJB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5cR-2a-TjT" secondAttribute="bottom" constant="9" id="dWo-ed-3Bq"/>
+                            <constraint firstItem="HJA-bN-mre" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gDL-p4-biG"/>
+                            <constraint firstItem="HJA-bN-mre" firstAttribute="top" secondItem="Dj4-Mo-mng" secondAttribute="bottom" constant="10" id="mU1-Yl-bUh"/>
+                            <constraint firstItem="Dj4-Mo-mng" firstAttribute="centerX" secondItem="5cR-2a-TjT" secondAttribute="centerX" id="q4K-5V-0Oe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HJA-bN-mre" secondAttribute="trailing" constant="10" id="qol-Aa-9C4"/>
+                            <constraint firstItem="HJA-bN-mre" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="tfN-ff-Hvs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="successLabel" destination="HJA-bN-mre" id="860-S8-02h"/>
                         <outlet property="textview" destination="Dj4-Mo-mng" id="22N-Cc-sEB"/>
                     </connections>
                 </viewController>
