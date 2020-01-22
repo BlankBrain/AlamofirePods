@@ -16,15 +16,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var successLabel: UILabel!
     let decoder = JSONDecoder() //declearing decode method
     
-    //model for json object
-    struct Course : Decodable {
-        let id: Int
-        let name: String
-        let link: String
-        let imageUrl: String
-        let number_of_lessons: Int
-    }
-    
+//    //model for json object
+//    struct Course : Decodable {
+//        let id: Int
+//        let name: String
+//        let link: String
+//        let imageUrl: String
+//        let number_of_lessons: Int
+//    }
+//    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -33,19 +33,18 @@ class ViewController: UIViewController {
     
     @IBAction func getButtonClicked(_ sender: Any) {
         
-        AF.request("https://api.letsbuildthatapp.com/jsondecodable/course").responseJSON { response in
+        AF.request("https://api.letsbuildthatapp.com/jsondecodable/courses").responseJSON { response in
             
             do{
-                let course = try self.decoder.decode(Course.self , from: response.data! )
+                let courses = try self.decoder.decode([Course].self , from: response.data! )
 //object where the data will be saved >>    decoder method. decode ( model , from data object )
                // self.textview.text = response.data?.base64EncodedString()
-                self.successLabel.text = course.name
+                self.successLabel.text = courses[1].name
+                print(courses)
             }catch{
                 print("error parsing json data")  }
             
             }
-        
-        
         
         }
     

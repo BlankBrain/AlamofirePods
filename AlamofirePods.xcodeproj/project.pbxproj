@@ -13,6 +13,8 @@
 		73992A4323D06EDA001C6D83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73992A4123D06ED9001C6D83 /* Main.storyboard */; };
 		73992A4523D06EDF001C6D83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73992A4423D06EDF001C6D83 /* Assets.xcassets */; };
 		73992A4823D06EDF001C6D83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73992A4623D06EDF001C6D83 /* LaunchScreen.storyboard */; };
+		73992A5223D46996001C6D83 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73992A5123D46996001C6D83 /* Models.swift */; };
+		73992A7423D48027001C6D83 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73992A7323D48027001C6D83 /* WeatherViewController.swift */; };
 		B86D92DB92810C8C9A9DFDF4 /* Pods_AlamofirePods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E421D957235016B5752D0F3 /* Pods_AlamofirePods.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +28,8 @@
 		73992A4423D06EDF001C6D83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73992A4723D06EDF001C6D83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73992A4923D06EDF001C6D83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73992A5123D46996001C6D83 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		73992A7323D48027001C6D83 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		7F423D4DDE35C4C8B22A9DC1 /* Pods-AlamofirePods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofirePods.debug.xcconfig"; path = "Target Support Files/Pods-AlamofirePods/Pods-AlamofirePods.debug.xcconfig"; sourceTree = "<group>"; };
 		BB69090E70806C6E63501766 /* Pods-AlamofirePods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofirePods.release.xcconfig"; path = "Target Support Files/Pods-AlamofirePods/Pods-AlamofirePods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +91,8 @@
 				73992A4423D06EDF001C6D83 /* Assets.xcassets */,
 				73992A4623D06EDF001C6D83 /* LaunchScreen.storyboard */,
 				73992A4923D06EDF001C6D83 /* Info.plist */,
+				73992A5123D46996001C6D83 /* Models.swift */,
+				73992A7323D48027001C6D83 /* WeatherViewController.swift */,
 			);
 			path = AlamofirePods;
 			sourceTree = "<group>";
@@ -207,8 +213,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				73992A4023D06ED9001C6D83 /* ViewController.swift in Sources */,
+				73992A7423D48027001C6D83 /* WeatherViewController.swift in Sources */,
 				73992A3C23D06ED9001C6D83 /* AppDelegate.swift in Sources */,
 				73992A3E23D06ED9001C6D83 /* SceneDelegate.swift in Sources */,
+				73992A5223D46996001C6D83 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
